@@ -101,5 +101,12 @@ CnjOrdInt& CnjOrdInt::operator/(const CnjOrdInt& b) const {
 }
 
 string CnjOrdInt::aHil() {
-   
+    stringstream fs;
+    NdoInt* p = inicio;
+    
+    while(p != nullptr){
+        fs << p->dato << ',';
+        p = p->sgt;
+    }
+    return fs.str();       
 }
